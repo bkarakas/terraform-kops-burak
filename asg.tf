@@ -185,8 +185,8 @@ resource "aws_autoscaling_group" "master-eu-west-1c-masters-burakkarakas-net" {
 resource "aws_autoscaling_group" "nodes-burakkarakas-net" {
   name                 = "nodes.burakkarakas.net"
   launch_configuration = "${aws_launch_configuration.nodes-burakkarakas-net.id}"
-  max_size             = 3
-  min_size             = 3
+  max_size             = "${var.max_size}"
+  min_size             = "${var.min_size}"
   vpc_zone_identifier  = ["${aws_subnet.eu-west-1a-burakkarakas-net.id}", "${aws_subnet.eu-west-1b-burakkarakas-net.id}", "${aws_subnet.eu-west-1c-burakkarakas-net.id}"]
 
   tag = {
