@@ -79,4 +79,6 @@ terraform_0.11.14 init
 
 echo "#############"
 echo "please use terraform_0.11.14"
+echo "ll"
 echo "#############"
+
